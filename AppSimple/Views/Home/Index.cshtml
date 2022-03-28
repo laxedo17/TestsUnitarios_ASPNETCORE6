@@ -1,0 +1,27 @@
+@using AppSimple.Models
+@Model IEnumerable<Producto>
+    @{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <title>App Simple</title>
+    </head>
+
+    <body>
+        <ul>
+            @foreach (Producto producto in Model ?? Enumerable.Empty<Producto>())
+            {
+                <li>Nome: @producto.Nome, Precio; @producto.Precio</li>
+            }
+            {
+
+            }
+        </ul>
+    </body>
+
+    </html>
